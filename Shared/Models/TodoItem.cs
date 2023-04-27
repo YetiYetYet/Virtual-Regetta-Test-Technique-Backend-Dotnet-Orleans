@@ -9,3 +9,9 @@ public record class TodoItem(
     Guid OwnerKey,
     DateTime? Timestamp = null
 );
+
+public record class CreateTodoDto(
+    string Title,
+    bool IsDone,
+    DateTime? Timestamp = null
+);

@@ -4,6 +4,10 @@ namespace Shared.Grains;
 
 public interface ITodoGrain : IGrainWithGuidKey
 {
-    Task SetAsync(TodoItem item);
-    Task<TodoItem?> GetAsync();
+    Task AddTodo(TodoItem todo);
+    Task UpdateTodo(TodoItem todo);
+    Task RemoveTodoByGuid(Guid id);
+    Task ClearTodos();
+    Task<List<TodoItem>> GetTodos();
+    
 }
